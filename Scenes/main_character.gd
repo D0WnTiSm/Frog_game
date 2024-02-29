@@ -23,17 +23,14 @@ func _physics_process(delta):
 
 	# Handle jump.
 
-	var jump_count: int = 0
+	var jump_count = 0
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		print(jump_count)
 
 	#Double Jump
-<<<<<<< HEAD
 	while jump_count < 1:
-=======
-	if jump_count <= 1:
->>>>>>> parent of aaf2427 (nothing edit)
 		if Input.is_action_just_released("jump") and not is_on_floor():
 				jump_count = 2
 				velocity.y = JUMP_VELOCITY
